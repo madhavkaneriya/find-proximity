@@ -1,0 +1,8 @@
+{
+  "name": "find-proximity",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "^2.1.5",
+    "underscore": "^1.8.3"
+  }
+}
