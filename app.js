@@ -9,37 +9,6 @@ inputArray.sort(function(a,b){
   return Number(a)-Number(b)
 });
 
-// async.forEach(inputArray,function(item,callback){
-//   var index = inputArray.indexOf(item), count = 0, left = index-1, right = index+1, temp = [];
-//   while(left >= 0 && count <= inputNumber && right < inputArray.length){
-//     if(item-inputArray[left] < inputArray[right]-item){
-//       temp.push(inputArray[left]);
-//       left--;
-//     }else{
-//       temp.push(inputArray[right]);
-//       right++;
-//     }
-//     count++;
-//   }
-//
-//   while(count <= inputNumber && left >= 0){
-//     temp.push(inputArray[left]);
-//     left--;
-//     count++;
-//   }
-//
-//   while(count <= inputNumber && right < inputNumber){
-//     temp.push(inputArray[right]);
-//     right++;
-//     count++;
-//   }
-//   result.push({key:item,value:temp});
-//   callback()
-// },function(err){
-//   if(err) console.log(err);
-//   else console.log(result);
-// });
-
 async.forEach(inputArray,function(item,callback){
   item = Number(item);
   var obj = {key:item, value:[]}, temp = [];
